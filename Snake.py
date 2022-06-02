@@ -17,6 +17,16 @@ class Snake():
             snake_body.color("white")
             snake_body.goto(initial_position[i])        
             self.snake.append(snake_body)
+    
+    def add_body(self,position):
+        snake_body = Turtle("square")
+        snake_body.penup()
+        snake_body.color("white")
+        snake_body.goto(position)        
+        self.snake.append(snake_body)
+
+    def extend(self):
+        self.add_body(self.snake[-1].position())
 
     def move(self):
         for i in range(len(self.snake)-1,0,-1):
