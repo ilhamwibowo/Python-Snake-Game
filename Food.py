@@ -1,7 +1,6 @@
 import random
 from re import S
 from turtle import Turtle
-import turtle
 
 class Food(Turtle):
     def __init__(self):
